@@ -1,3 +1,3 @@
-# Template Mod
+# Focus
 
-Edit about.md to change this
+Hides level difficulties

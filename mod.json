@@ -10,5 +10,9 @@
 	"name": "Focus",
 	"version": "v1.0.0",
 	"developer": "Yedel",
-	"description": "Hides level difficulties"
+	"description": "Hides level difficulties",
+	"links": {
+		"source": "https://github.com/Yedelo/Focus/"
+	},
+	"tags": ["customization", "interface"]
 }
