@@ -46,6 +46,12 @@
 			"default": true,
 			"enable-if": "hide-difficulty-in-level-screen"
 		},
+		"only-hide-rated-levels": {
+			"type": "bool",
+			"name": "Only Hide Rated Levels",
+			"description": "Only hide the difficulties and starts of rated levels.",
+			"default": false
+		},
 		"only-hide-uncompleted-levels": {
 			"type": "bool",
 			"name": "Only Hide Uncompleted Levels",
