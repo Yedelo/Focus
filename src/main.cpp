@@ -36,6 +36,12 @@ class $modify(LevelInfoLayer) {
                 }
             }
         }
+        if (Mod::get()->getSettingValue<bool>("hide-orbs-in-level-screen")) {
+            // orbtained
+            int orbsObtained = GameStatsManager::sharedState()->getAwardedCurrencyForLevel(m_level);
+            m_orbsLabel->setCString(fmt::format("{}/?", orbsObtained).c_str());
+            m_orbsLabel->updateLabel();
+        }
     }
 };
 

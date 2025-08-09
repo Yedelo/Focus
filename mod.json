@@ -39,6 +39,11 @@
 			"description": "Hides the standard difficulty (easy, hard, demon) in level screens.",
 			"default": true
 		},
+		"hide-orbs-in-level-screen": {
+			"type": "bool",
+			"name": "Hide Orbs in Level Screen",
+			"default": true
+		},
 		"hide-rate-demon-button": {
 			"type": "bool",
 			"name": "Hide Rate Demon Button",
