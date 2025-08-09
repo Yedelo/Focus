@@ -26,6 +26,7 @@
 		}
 	},
 	"links": {
+		"homepage": "https://geode-sdk.org/mods/yedel.focus",
 		"source": "https://github.com/Yedelo/Focus/"
 	},
 	"tags": ["customization", "interface"]
