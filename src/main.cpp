@@ -1,5 +1,3 @@
-
-#include "Geode/loader/SettingV3.hpp"
 #include <Geode/Geode.hpp>
 
 using namespace geode::prelude;
@@ -21,6 +19,7 @@ class $modify(LevelInfoLayer) {
 
     void checkToHideStarCount() {
         if (enabled && Mod::get()->getSettingValue<bool>("hide-stars-in-level-screen")) {
+            if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
             m_starsLabel->setCString("?");
             m_starsLabel->updateLabel();
         }

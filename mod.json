@@ -32,6 +32,12 @@
 			"name": "Hide Stars in Level Screen",
 			"description": "Hides stars/moons in level screens.",
 			"default": true
+		},
+		"only-hide-uncompleted-levels": {
+			"type": "bool",
+			"name": "Only Hide Uncompleted Levels",
+			"description": "Only hide the difficulties and stars of uncompleted levels.",
+			"default": true
 		}
 	}
 }
