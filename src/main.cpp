@@ -4,7 +4,7 @@
 
 using namespace geode::prelude;
 
-boolean enabled = true;
+bool enabled = true;
 
 #include <Geode/modify/LevelInfoLayer.hpp>
 class $modify(LevelInfoLayer) {
