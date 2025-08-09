@@ -48,18 +48,19 @@
 		"hide-stars": {
 			"type": "bool",
 			"name": "Hide Stars",
-			"description": "Hides stars/moons.",
+			"description": "Hides the stars/moons of levels.",
 			"default": true
 		},
 		"hide-difficulty": {
 			"type": "bool",
 			"name": "Hide Difficulty",
-			"description": "Hides the standard difficulty (easy, hard, demon).",
+			"description": "Hides the standard difficulty (easy, hard, demon) of levels.",
 			"default": true
 		},
 		"hide-orbs": {
 			"type": "bool",
 			"name": "Hide Orbs",
+			"description": "Hides the max orbs of levels.",
 			"default": true
 		},
 		"hide-rate-demon-button": {
