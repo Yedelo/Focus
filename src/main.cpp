@@ -19,13 +19,14 @@ class $modify(LevelInfoLayer) {
 
     void checkToHide() {
         if (!enabled) return;
+        if (Mod::get()->getSettingValue<bool>("only-hide-in-search")) return;
         if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
         if (Mod::get()->getSettingValue<bool>("only-hide-rated-levels") && !m_level->m_stars) return;
-        if (Mod::get()->getSettingValue<bool>("hide-stars-in-level-screen")) {
+        if (Mod::get()->getSettingValue<bool>("hide-stars")) {
             m_starsLabel->setCString("?");
             m_starsLabel->updateLabel();
         }
-        if (Mod::get()->getSettingValue<bool>("hide-difficulty-in-level-screen")) {
+        if (Mod::get()->getSettingValue<bool>("hide-difficulty")) {
             m_difficultySprite->updateDifficultyFrame(0, GJDifficultyName::Short);
             if (Mod::get()->getSettingValue<bool>("hide-rate-demon-button")) {
                 if (m_demonRateBtn) {
@@ -36,7 +37,7 @@ class $modify(LevelInfoLayer) {
                 }
             }
         }
-        if (Mod::get()->getSettingValue<bool>("hide-orbs-in-level-screen")) {
+        if (Mod::get()->getSettingValue<bool>("hide-orbs")) {
             // orbtained
             int orbsObtained = GameStatsManager::sharedState()->getAwardedCurrencyForLevel(m_level);
             m_orbsLabel->setCString(fmt::format("{}/?", orbsObtained).c_str());

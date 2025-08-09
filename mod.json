@@ -27,29 +27,11 @@
 			"description": "A global toggle for the mod.",
 			"default": true
 		},
-		"hide-stars-in-level-screen": {
+		"only-hide-in-search": {
 			"type": "bool",
-			"name": "Hide Stars in Level Screen",
-			"description": "Hides stars/moons in level screens.",
-			"default": true
-		},
-		"hide-difficulty-in-level-screen": {
-			"type": "bool",
-			"name": "Hide Difficulty in Level Screen",
-			"description": "Hides the standard difficulty (easy, hard, demon) in level screens.",
-			"default": true
-		},
-		"hide-orbs-in-level-screen": {
-			"type": "bool",
-			"name": "Hide Orbs in Level Screen",
-			"default": true
-		},
-		"hide-rate-demon-button": {
-			"type": "bool",
-			"name": "Hide Rate Demon Button",
-			"description": "Hides the rate demon button on hidden demon levels.",
-			"default": true,
-			"enable-if": "hide-difficulty-in-level-screen"
+			"name": "Only Hide in Search",
+			"description": "Only hide level information when searching for levels, not when in their screens.",
+			"default": false
 		},
 		"only-hide-rated-levels": {
 			"type": "bool",
@@ -62,6 +44,30 @@
 			"name": "Only Hide Uncompleted Levels",
 			"description": "Only hide the difficulties and stars of uncompleted levels.",
 			"default": true
+		},
+		"hide-stars": {
+			"type": "bool",
+			"name": "Hide Stars",
+			"description": "Hides stars/moons.",
+			"default": true
+		},
+		"hide-difficulty": {
+			"type": "bool",
+			"name": "Hide Difficulty",
+			"description": "Hides the standard difficulty (easy, hard, demon)",
+			"default": true
+		},
+		"hide-orbs": {
+			"type": "bool",
+			"name": "Hide Orbs",
+			"default": true
+		},
+		"hide-rate-demon-button": {
+			"type": "bool",
+			"name": "Hide Rate Demon Button",
+			"description": "Hides the rate demon button on hidden demon levels.",
+			"default": true,
+			"enable-if": "hide-difficulty"
 		}
 	}
 }
