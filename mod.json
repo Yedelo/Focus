@@ -21,6 +21,10 @@
 		"url": "https://github.com/Yedelo/Focus/issues"
 	},
 	"settings": {
+		"general": {
+			"type": "title",
+			"name": "General"
+		},
 		"enabled": {
 			"type": "bool",
 			"name": "Enabled",
@@ -44,6 +48,11 @@
 			"name": "Only Hide Uncompleted Levels",
 			"description": "Only hide the difficulty information of uncompleted levels.",
 			"default": true
+		},
+
+		"customization": {
+			"type": "title",
+			"name": "customization"
 		},
 		"hide-stars": {
 			"type": "bool",
