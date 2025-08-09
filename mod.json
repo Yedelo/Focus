@@ -39,6 +39,13 @@
 			"description": "Hides the standard difficulty (easy, hard, demon) in level screens.",
 			"default": true
 		},
+		"hide-rate-demon-button": {
+			"type": "bool",
+			"name": "Hide Rate Demon Button",
+			"description": "Hides the rate demon button on hidden demon levels.",
+			"default": true,
+			"enable-if": "hide-difficulty-in-level-screen"
+		},
 		"only-hide-uncompleted-levels": {
 			"type": "bool",
 			"name": "Only Hide Uncompleted Levels",
