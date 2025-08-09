@@ -11,6 +11,15 @@
 	"version": "v1.0.0",
 	"developer": "Yedel",
 	"description": "Hides level difficulties",
+	"tags": ["customization", "interface"],
+	"links": {
+		"homepage": "https://geode-sdk.org/mods/yedel.focus",
+		"source": "https://github.com/Yedelo/Focus/"
+	},
+	"issues": {
+		"info": "Report issues to the issue tracker on GitHub or to yedel on discord",
+		"url": "https://github.com/Yedelo/Focus/issues"
+	},
 	"settings": {
 		"enabled": {
 			"type": "bool",
@@ -24,14 +33,5 @@
 			"description": "Hides stars/moons in level screens.",
 			"default": true
 		}
-	},
-	"links": {
-		"homepage": "https://geode-sdk.org/mods/yedel.focus",
-		"source": "https://github.com/Yedelo/Focus/"
-	},
-	"issues": {
-		"info": "Report issues to the issue tracker on GitHub or to yedel on discord",
-		"url": "https://github.com/Yedelo/Focus/issues"
-	},
-	"tags": ["customization", "interface"]
+	}
 }
