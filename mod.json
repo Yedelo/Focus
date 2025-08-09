@@ -54,7 +54,7 @@
 		"hide-difficulty": {
 			"type": "bool",
 			"name": "Hide Difficulty",
-			"description": "Hides the standard difficulty (easy, hard, demon)",
+			"description": "Hides the standard difficulty (easy, hard, demon).",
 			"default": true
 		},
 		"hide-orbs": {
