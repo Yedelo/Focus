@@ -1,3 +1,5 @@
+#include "Geode/Enums.hpp"
+#include "Geode/binding/GJDifficultySprite.hpp"
 #include <Geode/Geode.hpp>
 
 using namespace geode::prelude;
@@ -20,12 +22,8 @@ class $modify(LevelInfoLayer) {
     void checkToHide() {
         if (!enabled) return;
         if (!Mod::get()->getSettingValue<bool>("hide-in-level-screens")) return;
-        if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
         if (Mod::get()->getSettingValue<bool>("only-hide-rated-levels") && !m_level->m_stars) return;
-        if (Mod::get()->getSettingValue<bool>("hide-stars")) {
-            m_starsLabel->setCString("?");
-            m_starsLabel->updateLabel();
-        }
+        if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
         if (Mod::get()->getSettingValue<bool>("hide-difficulty")) {
             m_difficultySprite->updateDifficultyFrame(0, GJDifficultyName::Short);
             if (Mod::get()->getSettingValue<bool>("hide-rate-demon-button")) {
@@ -36,6 +34,10 @@ class $modify(LevelInfoLayer) {
                     m_demonRateBtn->setOpacity(0);
                 }
             }
+        }
+        if (Mod::get()->getSettingValue<bool>("hide-stars")) {
+            m_starsLabel->setCString("?");
+            m_starsLabel->updateLabel();
         }
         if (Mod::get()->getSettingValue<bool>("hide-orbs")) {
             // orbtained

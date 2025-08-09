@@ -54,22 +54,10 @@
 			"type": "title",
 			"name": "customization"
 		},
-		"hide-stars": {
-			"type": "bool",
-			"name": "Hide Stars",
-			"description": "Hides the stars/moons of levels.",
-			"default": true
-		},
 		"hide-difficulty": {
 			"type": "bool",
 			"name": "Hide Difficulty",
 			"description": "Hides the standard difficulty (easy, hard, demon) of levels.",
-			"default": true
-		},
-		"hide-orbs": {
-			"type": "bool",
-			"name": "Hide Orbs",
-			"description": "Hides the max orbs of levels.",
 			"default": true
 		},
 		"hide-rate-demon-button": {
@@ -78,6 +66,18 @@
 			"description": "Hides the rate demon button on hidden demon levels.",
 			"default": true,
 			"enable-if": "hide-difficulty"
+		},
+		"hide-stars": {
+			"type": "bool",
+			"name": "Hide Stars",
+			"description": "Hides the stars/moons of levels.",
+			"default": true
+		},
+		"hide-orbs": {
+			"type": "bool",
+			"name": "Hide Orbs",
+			"description": "Hides the max orbs of levels.",
+			"default": true
 		}
 	}
 }
