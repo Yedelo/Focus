@@ -30,19 +30,19 @@
 		"only-hide-in-search": {
 			"type": "bool",
 			"name": "Only Hide in Search",
-			"description": "Only hide level information when searching for levels, not when in their screens.",
+			"description": "Only hide difficulty information when searching for levels, not when in their screens.",
 			"default": false
 		},
 		"only-hide-rated-levels": {
 			"type": "bool",
 			"name": "Only Hide Rated Levels",
-			"description": "Only hide the difficulties and starts of rated levels.",
+			"description": "Only hide the difficulty information of rated levels.",
 			"default": false
 		},
 		"only-hide-uncompleted-levels": {
 			"type": "bool",
 			"name": "Only Hide Uncompleted Levels",
-			"description": "Only hide the difficulties and stars of uncompleted levels.",
+			"description": "Only hide the difficulty information of uncompleted levels.",
 			"default": true
 		},
 		"hide-stars": {
