@@ -36,13 +36,13 @@ class $modify(LevelInfoLayer) {
             }
         }
         if (Mod::get()->getSettingValue<bool>("hide-stars")) {
-            m_starsLabel->setCString("?");
+            m_starsLabel->setString("?");
             m_starsLabel->updateLabel();
         }
         if (Mod::get()->getSettingValue<bool>("hide-orbs")) {
             // orbtained
             int orbsObtained = GameStatsManager::sharedState()->getAwardedCurrencyForLevel(m_level);
-            m_orbsLabel->setCString(fmt::format("{}/?", orbsObtained).c_str());
+            m_orbsLabel->setString(fmt::format("{}/?", orbsObtained).c_str());
             m_orbsLabel->updateLabel();
         }
     }
