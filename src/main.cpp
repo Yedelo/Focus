@@ -8,20 +8,23 @@ bool enabled = true;
 class $modify(LevelInfoLayer) {
     bool init(GJGameLevel* level, bool challenge) {
         if (!LevelInfoLayer::init(level, challenge)) return false;
-        checkToHideStarCount();
+        checkToHide();
         return true;
     }
 
     void levelDownloadFinished(GJGameLevel* p0) {
         LevelInfoLayer::levelDownloadFinished(p0);
-        checkToHideStarCount();
+        checkToHide();
     }
 
-    void checkToHideStarCount() {
+    void checkToHide() {
+        if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
         if (enabled && Mod::get()->getSettingValue<bool>("hide-stars-in-level-screen")) {
-            if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
             m_starsLabel->setCString("?");
             m_starsLabel->updateLabel();
+        }
+        if (enabled && Mod::get()->getSettingValue<bool>("hide-difficulty-in-level-screen")) {
+            m_difficultySprite->updateDifficultyFrame(0, GJDifficultyName::Short);
         }
     }
 };

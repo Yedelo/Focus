@@ -33,6 +33,12 @@
 			"description": "Hides stars/moons in level screens.",
 			"default": true
 		},
+		"hide-difficulty-in-level-screen": {
+			"type": "bool",
+			"name": "Hide Difficulty in Level Screen",
+			"description": "Hides the standard difficulty (easy, hard, demon) in level screens.",
+			"default": true
+		},
 		"only-hide-uncompleted-levels": {
 			"type": "bool",
 			"name": "Only Hide Uncompleted Levels",
