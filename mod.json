@@ -78,6 +78,11 @@
 			"name": "Hide Orbs",
 			"description": "Hides the max orbs of levels.",
 			"default": true
+		},
+		"hidden-text-replacement": {
+			"type": "string",
+			"name": "Hidden Text Replacement",
+			"default": "?"
 		}
 	}
 }
