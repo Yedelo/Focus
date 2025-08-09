@@ -24,7 +24,7 @@
 		"enabled": {
 			"type": "bool",
 			"name": "Enabled",
-			"description": "A global toggle for the mod.",
+			"description": "A general toggle for the mod.",
 			"default": true
 		},
 		"only-hide-in-search": {
