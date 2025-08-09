@@ -19,7 +19,7 @@ class $modify(LevelInfoLayer) {
 
     void checkToHide() {
         if (!enabled) return;
-        if (Mod::get()->getSettingValue<bool>("only-hide-in-search")) return;
+        if (!Mod::get()->getSettingValue<bool>("hide-in-level-screens")) return;
         if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
         if (Mod::get()->getSettingValue<bool>("only-hide-rated-levels") && !m_level->m_stars) return;
         if (Mod::get()->getSettingValue<bool>("hide-stars")) {

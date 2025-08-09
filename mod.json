@@ -31,11 +31,11 @@
 			"description": "A general toggle for the mod.",
 			"default": true
 		},
-		"only-hide-in-search": {
+		"hide-in-level-screens": {
 			"type": "bool",
-			"name": "Only Hide in Search",
-			"description": "Only hide difficulty information when searching for levels, not when in their screens.",
-			"default": false
+			"name": "Hide in Level Screens",
+			"description": "Hide difficulty information while in level screens",
+			"default": true
 		},
 		"only-hide-rated-levels": {
 			"type": "bool",
