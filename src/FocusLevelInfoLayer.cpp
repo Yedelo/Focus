@@ -1,10 +1,6 @@
-#include "Geode/Enums.hpp"
-#include "Geode/binding/GJDifficultySprite.hpp"
 #include <Geode/Geode.hpp>
 
 using namespace geode::prelude;
-
-bool enabled = true;
 
 #include <Geode/modify/LevelInfoLayer.hpp>
 class $modify(LevelInfoLayer) {
@@ -20,7 +16,7 @@ class $modify(LevelInfoLayer) {
     }
 
     void checkToHide() {
-        if (!enabled) return;
+        if (!Mod::get()->getSettingValue<bool>("enabled")) return;
         if (!Mod::get()->getSettingValue<bool>("hide-in-level-screens")) return;
         if (Mod::get()->getSettingValue<bool>("only-hide-rated-levels") && !m_level->m_stars) return;
         if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(m_level)) return;
@@ -48,10 +44,3 @@ class $modify(LevelInfoLayer) {
         }
     }
 };
-
-$execute {
-    enabled = Mod::get()->getSettingValue<bool>("enabled");
-    listenForSettingChangesV3("enabled", [](bool enabled) {
-        ::enabled = enabled;
-    });
-}
