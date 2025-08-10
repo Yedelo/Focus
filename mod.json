@@ -58,7 +58,8 @@
 
 		"customization": {
 			"type": "title",
-			"name": "customization"
+			"name": "customization",
+			"description": "Choose which elements to hide."
 		},
 		"hide-difficulty": {
 			"type": "bool",
