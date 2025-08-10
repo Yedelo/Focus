@@ -12,7 +12,7 @@ inline void checkToHideDifficultyElements(std::string setting, GJGameLevel* leve
     if (Mod::get()->getSettingValue<bool>("hide-difficulty")) {
         difficultySprite->updateDifficultyFrame(0, GJDifficultyName::Short);
     }
-    if (Mod::get()->getSettingValue<bool>("hide-stars")) {
+    if (Mod::get()->getSettingValue<bool>("hide-stars") && starsLabel) {
         starsLabel->setString(hiddenTextReplacement.c_str());
         starsLabel->updateLabel();
     }
