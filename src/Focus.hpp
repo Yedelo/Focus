@@ -2,7 +2,7 @@
 
 using namespace geode::prelude;
 
-inline void checkToHide(std::string setting, GJGameLevel* level, GJDifficultySprite* difficultySprite, CCLabelBMFont* starsLabel, CCLabelBMFont* orbsLabel) {
+inline void checkToHideDifficultyElements(std::string setting, GJGameLevel* level, GJDifficultySprite* difficultySprite, CCLabelBMFont* starsLabel, CCLabelBMFont* orbsLabel) {
     if (!Mod::get()->getSettingValue<bool>("enabled")) return;
     if (!Mod::get()->getSettingValue<bool>(setting)) return;
     if (Mod::get()->getSettingValue<bool>("only-hide-rated-levels") && !level->m_stars) return;
