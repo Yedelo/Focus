@@ -31,6 +31,12 @@
 			"description": "A general toggle for the mod.",
 			"default": true
 		},
+		"hide-in-level-cells": {
+			"type": "bool",
+			"name": "Hide in Level Cells",
+			"description": "Hide difficulty information in level cells, found when searching and finding level previews.",
+			"default": true
+		},
 		"hide-in-level-screens": {
 			"type": "bool",
 			"name": "Hide in Level Screens",
