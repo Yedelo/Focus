@@ -2,7 +2,7 @@
 
 using namespace geode::prelude;
 
-#include "Focus.hpp";
+#include "Focus.hpp"
 
 #include <Geode/modify/LevelInfoLayer.hpp>
 class $modify(LevelInfoLayer) {
