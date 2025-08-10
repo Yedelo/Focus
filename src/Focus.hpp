@@ -16,6 +16,8 @@ inline void checkToHideDifficultyElements(std::string setting, GJGameLevel* leve
         starsLabel->setString(hiddenTextReplacement.c_str());
         starsLabel->updateLabel();
     }
+    // the orbsLabel check is not only for unrated levels but for auto levels which give no orbs
+    // if the level has ? stars and no orbs label i think you can figure out what the difficulty is
     if (Mod::get()->getSettingValue<bool>("hide-orbs") && orbsLabel) {
         // orbtained
         int orbsObtained = GameStatsManager::sharedState()->getAwardedCurrencyForLevel(level);
