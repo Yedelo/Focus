@@ -9,7 +9,7 @@ inline void checkToHideDifficultyElements(std::string setting, GJGameLevel* leve
     if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(level)) return;
     if (Mod::get()->getSettingValue<bool>("dont-hide-auto-levels") && level->m_autoLevel) return;
     std::string hiddenTextReplacement = Mod::get()->getSettingValue<std::string>("hidden-text-replacement");
-    if (Mod::get()->getSettingValue<bool>("hide-difficulty")) {
+    if (Mod::get()->getSettingValue<bool>("hide-difficulty") && difficultySprite) {
         difficultySprite->updateDifficultyFrame(0, GJDifficultyName::Short);
     }
     if (Mod::get()->getSettingValue<bool>("hide-stars") && starsLabel) {

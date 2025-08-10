@@ -9,12 +9,16 @@ class $modify(LevelCell) {
     void loadCustomLevelCell() {
         LevelCell::loadCustomLevelCell();
         CCNode* difficultyContainer = m_mainLayer->getChildByID("difficulty-container");
+        if (!difficultyContainer) return;
+        GJDifficultySprite* difficultySprite = geode::cast::typeinfo_cast<GJDifficultySprite*>(difficultyContainer->getChildByID("difficulty-sprite"));
+        CCLabelBMFont* starsLabel = geode::cast::typeinfo_cast<CCLabelBMFont*>(difficultyContainer->getChildByID("stars-label"));
+        CCLabelBMFont* orbsLabel = geode::cast::typeinfo_cast<CCLabelBMFont*>(m_mainLayer->getChildByID("orbs-label"));
         checkToHideDifficultyElements(
             "hide-in-level-cells",
             m_level,
-            static_cast<GJDifficultySprite*>(difficultyContainer->getChildByID("difficulty-sprite")),
-            static_cast<CCLabelBMFont*>(difficultyContainer->getChildByID("stars-label")),
-            static_cast<CCLabelBMFont*>(m_mainLayer->getChildByID("orbs-label"))
+            difficultySprite,
+            starsLabel,
+            orbsLabel
         );
     }
 };
