@@ -15,7 +15,7 @@ inline void checkToHide(std::string setting, GJGameLevel* level, GJDifficultySpr
         starsLabel->setString(hiddenTextReplacement.c_str());
         starsLabel->updateLabel();
     }
-    if (Mod::get()->getSettingValue<bool>("hide-orbs")) {
+    if (Mod::get()->getSettingValue<bool>("hide-orbs") && orbsLabel) {
         // orbtained
         int orbsObtained = GameStatsManager::sharedState()->getAwardedCurrencyForLevel(level);
         orbsLabel->setString(fmt::format("{}/{}", orbsObtained, hiddenTextReplacement.c_str()).c_str());
