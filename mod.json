@@ -55,6 +55,12 @@
 			"description": "Only hide the difficulty information of uncompleted levels.",
 			"default": true
 		},
+		"dont-hide-auto-levels": {
+			"type": "bool",
+			"name": "Don't Hide Auto Levels",
+			"description": "Don't hide the difficulty information of auto levels.",
+			"default": false
+		},
 
 		"customization": {
 			"type": "title",
