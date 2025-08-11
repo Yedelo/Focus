@@ -10,6 +10,10 @@ inline void checkToHideDifficultyElements(std::string setting, GJGameLevel* leve
     if (Mod::get()->getSettingValue<bool>("dont-hide-auto-levels") && level->m_autoLevel) return;
     std::string hiddenTextReplacement = Mod::get()->getSettingValue<std::string>("hidden-text-replacement");
     if (Mod::get()->getSettingValue<bool>("hide-difficulty") && difficultySprite) {
+        if (Mod::get()->getSettingValue<bool>("demon-mode") && level->m_stars == 10) {
+            difficultySprite->updateDifficultyFrame(6, GJDifficultyName::Short);
+            return;
+        }
         difficultySprite->updateDifficultyFrame(0, GJDifficultyName::Short);
     }
     if (Mod::get()->getSettingValue<bool>("hide-stars") && starsLabel) {
