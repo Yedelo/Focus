@@ -2,6 +2,9 @@
 
 using namespace geode::prelude;
 
+#define STANDARD_DEMON_NUMBER 6
+#define NA_NUMBER 0
+
 inline void checkToHideDifficultyElements(std::string setting, GJGameLevel* level, GJDifficultySprite* difficultySprite, CCLabelBMFont* starsLabel, CCLabelBMFont* orbsLabel) {
     if (!Mod::get()->getSettingValue<bool>("enabled")) return;
     if (!Mod::get()->getSettingValue<bool>(setting)) return;
@@ -11,10 +14,10 @@ inline void checkToHideDifficultyElements(std::string setting, GJGameLevel* leve
     std::string hiddenTextReplacement = Mod::get()->getSettingValue<std::string>("hidden-text-replacement");
     if (Mod::get()->getSettingValue<bool>("hide-difficulty") && difficultySprite) {
         if (Mod::get()->getSettingValue<bool>("demon-mode") && level->m_stars == 10) {
-            difficultySprite->updateDifficultyFrame(6, GJDifficultyName::Short);
+            difficultySprite->updateDifficultyFrame(STANDARD_DEMON_NUMBER, GJDifficultyName::Short);
             return;
         }
-        difficultySprite->updateDifficultyFrame(0, GJDifficultyName::Short);
+        difficultySprite->updateDifficultyFrame(NA_NUMBER, GJDifficultyName::Short);
     }
     if (Mod::get()->getSettingValue<bool>("hide-stars") && starsLabel) {
         starsLabel->setString(hiddenTextReplacement.c_str());
