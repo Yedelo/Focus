@@ -44,6 +44,12 @@
 			"description": "A general toggle for the mod.",
 			"default": true
 		},
+		"demon-mode": {
+			"type": "bool",
+			"name": "Demon Mode",
+			"description": "Only hide the demon difficulties of demon levels.",
+			"default": false
+		},
 		"hide-in-level-cells": {
 			"type": "bool",
 			"name": "Hide in Level Cells",
@@ -72,12 +78,6 @@
 			"type": "bool",
 			"name": "Don't Hide Auto Levels",
 			"description": "Don't hide the difficulty information of auto levels.",
-			"default": false
-		},
-		"demon-mode": {
-			"type": "bool",
-			"name": "Demon Mode",
-			"description": "Only hide the demon difficulties of demon levels.",
 			"default": false
 		},
 
