@@ -53,7 +53,7 @@
 		"hide-in-level-screens": {
 			"type": "bool",
 			"name": "Hide in Level Screens",
-			"description": "Hide difficulty information while in level screens",
+			"description": "Hide difficulty information while in level screens.",
 			"default": true
 		},
 		"only-hide-rated-levels": {
