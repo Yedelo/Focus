@@ -108,6 +108,7 @@
 		"hidden-text-replacement": {
 			"type": "string",
 			"name": "Hidden Text Replacement",
+			"description": "The text to use for replacing star/orb numbers.",
 			"default": "?"
 		}
 	}
