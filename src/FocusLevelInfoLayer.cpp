@@ -8,16 +8,16 @@ using namespace geode::prelude;
 class $modify(LevelInfoLayer) {
     bool init(GJGameLevel* level, bool challenge) {
         if (!LevelInfoLayer::init(level, challenge)) return false;
-        checkToHideAllElements();
+        hideAllDifficultyElements();
         return true;
     }
     
     void levelDownloadFinished(GJGameLevel* level) {
         LevelInfoLayer::levelDownloadFinished(level);
-        checkToHideAllElements();
+        hideAllDifficultyElements();
     }
     
-    void checkToHideAllElements() {
+    void hideAllDifficultyElements() {
         hideDifficultyElements("hide-in-level-screens", m_level, m_difficultySprite, m_starsLabel, m_orbsLabel);
         if (
             Mod::get()->getSettingValue<bool>("enabled") 
