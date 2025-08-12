@@ -5,7 +5,13 @@ using namespace geode::prelude;
 #define STANDARD_DEMON_NUMBER 6
 #define NA_NUMBER 0
 
-void hideDifficultyElements(std::string setting, GJGameLevel *level, GJDifficultySprite *difficultySprite, CCLabelBMFont *starsLabel, CCLabelBMFont *orbsLabel) {
+void hideDifficultyElements(
+    std::string setting,
+    GJGameLevel *level, 
+    GJDifficultySprite *difficultySprite, 
+    CCLabelBMFont *starsLabel, 
+    CCLabelBMFont *orbsLabel
+) {
     if (!Mod::get()->getSettingValue<bool>("enabled")) return;
     if (!Mod::get()->getSettingValue<bool>(setting)) return;
     if (Mod::get()->getSettingValue<bool>("only-hide-rated-levels") && !level->m_stars) return;
@@ -31,4 +37,14 @@ void hideDifficultyElements(std::string setting, GJGameLevel *level, GJDifficult
         orbsLabel->setString(fmt::format("{}/{}", orbsObtained, hiddenTextReplacement.c_str()).c_str());
         orbsLabel->updateLabel();
     }
+}
+
+void hideDifficultyElementsForLevelInfoLayer(LevelInfoLayer* levelInfoLayer) {
+    hideDifficultyElements(
+        "hide-in-level-screens", 
+        levelInfoLayer->m_level, 
+        levelInfoLayer->m_difficultySprite, 
+        levelInfoLayer->m_starsLabel, 
+        levelInfoLayer->m_orbsLabel
+    );
 }

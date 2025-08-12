@@ -4,4 +4,11 @@
 
 using namespace geode::prelude;
 
-void hideDifficultyElements(std::string setting, GJGameLevel* level, GJDifficultySprite* difficultySprite, CCLabelBMFont* starsLabel, CCLabelBMFont* orbsLabel);
+void hideDifficultyElements(
+    std::string setting, 
+    GJGameLevel* level,
+    GJDifficultySprite* difficultySprite, 
+    CCLabelBMFont* starsLabel, 
+    CCLabelBMFont* orbsLabel
+);
+void hideDifficultyElementsForLevelInfoLayer(LevelInfoLayer* levelInfoLayer);

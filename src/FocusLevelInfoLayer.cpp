@@ -18,7 +18,7 @@ class $modify(LevelInfoLayer) {
     }
     
     void hideAllDifficultyElements() {
-        hideDifficultyElements("hide-in-level-screens", m_level, m_difficultySprite, m_starsLabel, m_orbsLabel);
+        hideDifficultyElementsForLevelInfoLayer(this);
         if (
             Mod::get()->getSettingValue<bool>("enabled") 
             && Mod::get()->getSettingValue<bool>("hide-difficulty") 
