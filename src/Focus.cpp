@@ -5,7 +5,7 @@ using namespace geode::prelude;
 #define STANDARD_DEMON_NUMBER 6
 #define NA_NUMBER 0
 
-void checkToHideDifficultyElements(std::string setting, GJGameLevel *level, GJDifficultySprite *difficultySprite, CCLabelBMFont *starsLabel, CCLabelBMFont *orbsLabel) {
+void hideDifficultyElements(std::string setting, GJGameLevel *level, GJDifficultySprite *difficultySprite, CCLabelBMFont *starsLabel, CCLabelBMFont *orbsLabel) {
     if (!Mod::get()->getSettingValue<bool>("enabled")) return;
     if (!Mod::get()->getSettingValue<bool>(setting)) return;
     if (Mod::get()->getSettingValue<bool>("only-hide-rated-levels") && !level->m_stars) return;

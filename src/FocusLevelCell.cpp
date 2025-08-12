@@ -14,7 +14,7 @@ class $modify(LevelCell) {
         CCLabelBMFont* starsLabel = geode::cast::typeinfo_cast<CCLabelBMFont*>(difficultyContainer->getChildByID("stars-label"));
         CCLabelBMFont* orbsLabel = geode::cast::typeinfo_cast<CCLabelBMFont*>(m_mainLayer->getChildByID("orbs-label"));
         // may be null but checked in this function
-        checkToHideDifficultyElements(
+        hideDifficultyElements(
             "hide-in-level-cells",
             m_level,
             difficultySprite,
