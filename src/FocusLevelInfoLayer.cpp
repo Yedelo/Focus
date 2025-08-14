@@ -42,6 +42,14 @@ class $modify(FocusLevelInfoLayer, LevelInfoLayer) {
     }
 };
 
-bool revealedDifficultyInformation(LevelInfoLayer *levelInfoLayer) {
-    return static_cast<FocusLevelInfoLayer*>(levelInfoLayer)->m_fields->m_revealedDifficultyInformation;
+void hideDifficultyElementsForLevelInfoLayer(LevelInfoLayer* levelInfoLayer) {
+    if (!static_cast<FocusLevelInfoLayer*>(levelInfoLayer)->m_fields->m_revealedDifficultyInformation) {
+        hideDifficultyElements(
+            "hide-in-level-screens", 
+            levelInfoLayer->m_level, 
+            levelInfoLayer->m_difficultySprite, 
+            levelInfoLayer->m_starsLabel, 
+            levelInfoLayer->m_orbsLabel
+        );
+    }
 }

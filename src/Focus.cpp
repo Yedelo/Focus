@@ -38,13 +38,3 @@ void hideDifficultyElements(
         orbsLabel->updateLabel();
     }
 }
-
-void hideDifficultyElementsForLevelInfoLayer(LevelInfoLayer* levelInfoLayer) {
-    hideDifficultyElements(
-        "hide-in-level-screens", 
-        levelInfoLayer->m_level, 
-        levelInfoLayer->m_difficultySprite, 
-        levelInfoLayer->m_starsLabel, 
-        levelInfoLayer->m_orbsLabel
-    );
-}

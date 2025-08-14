@@ -11,9 +11,7 @@ class $modify(LikeItemLayer) {
         CCScene* mainScene = geode::cast::typeinfo_cast<CCScene*>(getParent());
         LikeItemLayer::triggerLike(isLiked);
         if (LevelInfoLayer* levelInfoLayer = geode::cast::typeinfo_cast<LevelInfoLayer*>(mainScene->getChildByID("LevelInfoLayer"))) {
-            if (!revealedDifficultyInformation(levelInfoLayer)) {
-                hideDifficultyElementsForLevelInfoLayer(levelInfoLayer);
-            }
+            hideDifficultyElementsForLevelInfoLayer(levelInfoLayer);
         }
     }
 };
