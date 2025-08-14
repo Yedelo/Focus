@@ -18,7 +18,7 @@ void hideDifficultyElements(
     if (Mod::get()->getSettingValue<bool>("only-hide-uncompleted-levels") && GameStatsManager::sharedState()->hasCompletedLevel(level)) return;
     if (Mod::get()->getSettingValue<bool>("dont-hide-auto-levels") && level->m_autoLevel) return;
     std::string hiddenTextReplacement = Mod::get()->getSettingValue<std::string>("hidden-text-replacement");
-    if (Mod::get()->getSettingValue<bool>("demon-mode") && level->m_stars == 10) {
+    if (Mod::get()->getSettingValue<bool>("demon-mode") && level->m_stars == 10 && difficultySprite) {
         difficultySprite->updateDifficultyFrame(STANDARD_DEMON_NUMBER, GJDifficultyName::Short);
         return;
     }
