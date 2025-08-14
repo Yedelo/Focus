@@ -7,10 +7,10 @@ using namespace geode::prelude;
 
 void hideDifficultyElements(
     std::string setting,
-    GJGameLevel *level, 
-    GJDifficultySprite *difficultySprite, 
-    CCLabelBMFont *starsLabel, 
-    CCLabelBMFont *orbsLabel
+    GJGameLevel* level, 
+    GJDifficultySprite* difficultySprite, 
+    CCLabelBMFont* starsLabel, 
+    CCLabelBMFont* orbsLabel
 ) {
     if (!Mod::get()->getSettingValue<bool>("enabled")) return;
     if (!Mod::get()->getSettingValue<bool>(setting)) return;
