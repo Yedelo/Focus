@@ -5,7 +5,11 @@ using namespace geode::prelude;
 #include "Focus.hpp"
 
 #include <Geode/modify/LevelInfoLayer.hpp>
-class $modify(LevelInfoLayer) {
+class $modify(FocusLevelInfoLayer, LevelInfoLayer) {
+    struct Fields {
+        bool m_revealedDifficultyInformation = false;
+    };
+
     bool init(GJGameLevel* level, bool challenge) {
         if (!LevelInfoLayer::init(level, challenge)) return false;
         hideAllDifficultyElements();
@@ -31,4 +35,13 @@ class $modify(LevelInfoLayer) {
             m_demonRateBtn->setOpacity(0);
         }
     }
+
+    void revealDifficultyInformation() {
+        m_fields->m_revealedDifficultyInformation = true;
+        updateLabelValues();
+    }
 };
+
+bool revealedDifficultyInformation(LevelInfoLayer *levelInfoLayer) {
+    return static_cast<FocusLevelInfoLayer*>(levelInfoLayer)->m_fields->m_revealedDifficultyInformation;
+}

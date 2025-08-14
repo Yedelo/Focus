@@ -12,3 +12,4 @@ void hideDifficultyElements(
     CCLabelBMFont* orbsLabel
 );
 void hideDifficultyElementsForLevelInfoLayer(LevelInfoLayer* levelInfoLayer);
+bool revealedDifficultyInformation(LevelInfoLayer* levelInfoLayer);
