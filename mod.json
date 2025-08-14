@@ -106,7 +106,7 @@
 		"hide-rate-demon-button": {
 			"type": "bool",
 			"name": "Hide Rate Demon Button",
-			"description": "Hides the rate demon button on hidden demon levels.",
+			"description": "Hides the rate demon button on demon levels.",
 			"default": true,
 			"enable-if": "hide-difficulty"
 		},
