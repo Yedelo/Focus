@@ -10,7 +10,7 @@ class $modify(FocusLevelInfoLayer, LevelInfoLayer) {
         bool m_revealedDifficultyInformation = false;
     };
 
-    bool init(GJGameLevel* level, bool challenge) {
+    $override bool init(GJGameLevel* level, bool challenge) {
         if (!LevelInfoLayer::init(level, challenge)) return false;
 
         hideAllDifficultyElements();
@@ -26,7 +26,7 @@ class $modify(FocusLevelInfoLayer, LevelInfoLayer) {
         return true;
     }
     
-    void levelDownloadFinished(GJGameLevel* level) {
+    $override void levelDownloadFinished(GJGameLevel* level) {
         LevelInfoLayer::levelDownloadFinished(level);
         hideAllDifficultyElements();
     }

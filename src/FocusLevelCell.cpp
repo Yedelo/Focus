@@ -6,7 +6,7 @@ using namespace geode::prelude;
 
 #include <Geode/modify/LevelCell.hpp>
 class $modify(LevelCell) {
-    void loadCustomLevelCell() {
+    $override void loadCustomLevelCell() {
         LevelCell::loadCustomLevelCell();
         CCNode* difficultyContainer = m_mainLayer->getChildByID("difficulty-container");
         if (!difficultyContainer) return;
