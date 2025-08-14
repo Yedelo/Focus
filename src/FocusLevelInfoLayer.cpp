@@ -35,7 +35,6 @@ class $modify(FocusLevelInfoLayer, LevelInfoLayer) {
         hideDifficultyElementsForLevelInfoLayer(this);
         if (
             Mod::get()->getSettingValue<bool>("enabled") 
-            && Mod::get()->getSettingValue<bool>("hide-difficulty") 
             && Mod::get()->getSettingValue<bool>("hide-rate-demon-button") 
             && m_demonRateBtn
         ) {
