@@ -12,7 +12,17 @@ class $modify(FocusLevelInfoLayer, LevelInfoLayer) {
 
     bool init(GJGameLevel* level, bool challenge) {
         if (!LevelInfoLayer::init(level, challenge)) return false;
+
         hideAllDifficultyElements();
+        if (Mod::get()->getSettingValue<bool>("enabled") && Mod::get()->getSettingValue<bool>("add-reveal-button")) {
+            CCMenu* leftSideMenu = static_cast<CCMenu*>(getChildByID("left-side-menu"));
+            CircleButtonSprite* sprite = CircleButtonSprite::createWithSprite("logo.png"_spr);
+            CCMenuItemSpriteExtra* button = CCMenuItemSpriteExtra::create(sprite, this, menu_selector(FocusLevelInfoLayer::revealDifficultyInformation));
+            button->setID("focus-button");
+            leftSideMenu->addChild(button);
+            leftSideMenu->updateLayout();
+        }
+
         return true;
     }
     
@@ -36,7 +46,7 @@ class $modify(FocusLevelInfoLayer, LevelInfoLayer) {
         }
     }
 
-    void revealDifficultyInformation() {
+    void revealDifficultyInformation(CCObject* sender) {
         m_fields->m_revealedDifficultyInformation = true;
         updateLabelValues();
     }
