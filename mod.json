@@ -8,7 +8,7 @@
 	},
 	"id": "yedel.focus",
 	"name": "Focus",
-	"version": "v1.0.0",
+	"version": "v1.1.0a",
 	"developer": "Yedel",
 	"description": "Hides level difficulties",
 	"tags": ["customization", "interface"],
