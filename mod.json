@@ -26,11 +26,11 @@
 	"incompatibilities": {
 		"abb2k.demonify": {
 			"version": "v1.0.5",
-			"importance": "conflicting"
+			"breaking": false
 		},
 		"hiimjustin000.demons_in_between": {
 			"version": "1.4.12",
-			"importance": "conflicting"
+			"breaking": false
 		}
 	},
 	"resources": {
