@@ -21,7 +21,7 @@
 		"url": "https://github.com/Yedelo/Focus/issues"
 	},
 	"dependencies": {
-		"geode.node-ids": ">=1.23.0"
+		"geode.node-ids": "1.23.0"
 	},
 	"incompatibilities": {
 		"abb2k.demonify": {
