@@ -127,6 +127,12 @@
 			"name": "Hidden Text Replacement",
 			"description": "The text to use for replacing star/orb numbers.",
 			"default": "?"
+		},
+
+		"ingame": {
+			"type": "title",
+			"name": "In-Game",
+			"description": "Options to hide difficulty in-game."
 		}
 	}
 }
