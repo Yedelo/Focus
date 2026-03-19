@@ -133,6 +133,12 @@
 			"type": "title",
 			"name": "In-Game",
 			"description": "Options to hide difficulty in-game."
+		},
+		"hide-orb-gain-animation": {
+			"type": "bool",
+			"name": "Hide Orb Gain Animation",
+			"description": "Hide the animation of gaining orbs when getting a new best.",
+			"default": false
 		}
 	}
 }
